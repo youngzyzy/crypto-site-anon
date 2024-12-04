@@ -1,0 +1,305 @@
+*::before,
+*::after,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+main {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  border: 1px solid black;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("image/main-background.png");
+  background-size: cover;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  filter: brightness(90%); /* Apply brightness to the image */
+}
+
+body {
+  background-color: black;
+}
+
+.main-logo {
+  filter: brightness(100%);
+  width: 70%;
+  animation: fall-bounce 1.5s forwards;
+  position: relative;
+}
+.main-contract {
+  width: 70%;
+  padding: 2rem;
+  border: 3px solid black;
+  border-radius: 15px;
+  font-size: 2.5vw;
+}
+.main-contract:hover {
+  color: #eb4b27;
+  border: 3px solid#eb4b27;
+  cursor: pointer;
+  background-color: pink;
+}
+.main-stickerone {
+  position: absolute;
+  height: 40%;
+  width: auto;
+  bottom: 0%;
+  animation: slideIn 1.4s ease-out forwards;
+}
+/* nav */
+nav {
+  width: 100%;
+  background-color: black;
+  position: sticky;
+}
+.svg {
+  width: 50px;
+  color: white;
+}
+.svg:hover {
+  color: red;
+  cursor: pointer;
+}
+.nav-container {
+  max-width: 1300px;
+  border: 1px solid black;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: black;
+}
+/* video section */
+.video-section {
+  background-color: black
+  width: 100%;
+
+  padding: 4rem 2rem;
+}
+.video-title {
+  display: block;
+  margin: 0 auto;
+  width: 40%;
+}
+.video {
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  height: auto;
+}
+/* buy section */
+.buy-section {
+  padding: 4rem 2rem;
+  width: 100%;
+  background-color: #111111;
+}
+.buy-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.buy-image {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+.cards-container {
+  max-width: 1300px;
+  padding: 2rem;
+
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.card {
+  font-family: "JetBrains Mono";
+  text-align: center;
+  width: 300px;
+  height: 300px;
+  padding: 1rem;
+  color: white;
+  border: 1px solid white;
+  font-size: 1.5rem;
+  border-radius: 30px;
+
+  gap: 1rem;
+}
+.card h2 {
+  text-decoration: underline;
+}
+.laptop-image {
+  display: block;
+  margin: 0 auto;
+  width: 400px;
+}
+.coin-image {
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+}
+/* roadmap */
+.roadmap-image {
+  height: 30%;
+  width: auto;
+}
+.roadmap {
+  background-color: black;
+}
+.card.two {
+  height: 500px;
+}
+.roadmap {
+  padding: 4rem 2rem;
+}
+.roadmap-title {
+  display: block;
+  margin: 0 auto;
+  width: 500px;
+}
+.card.two ul {
+  list-style: none;
+}
+/* about */
+.about {
+  width: 100%;
+  background-color: #111111;
+}
+.about-container {
+  max-width: 1300px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  flex-direction: row;
+  gap: 2rem;
+}
+.about-left {
+  color: white;
+  font-family: "JetBrains Mono";
+}
+.about-left h2 {
+  font-size: 3rem;
+}
+.about-left p {
+  font-size: 1.5rem;
+}
+
+.about-right {
+  width: 300px;
+}
+
+/* footer */
+footer {
+  font-family: "JetBrains Mono";
+  background-color: #111111;
+}
+.footer-container {
+  max-width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+.footer-right {
+  width: 200px;
+  height: auto;
+  border: 1px solid black;
+  border-radius: 100%;
+}
+
+.footer-left {
+  width: 200px;
+  text-align: center;
+}
+.footer-left img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 2rem;
+
+}
+.footer-left p {
+  text-align: center;
+  color: white;
+  font-size: 1.2em;
+}
+@keyframes fall-bounce {
+  0% {
+    top: -100%; /* Start off-screen, above the container */
+  }
+
+  100% {
+    top: 0%; /* Settle at the surface */
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    bottom: -100%;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0%;
+  }
+  100% {
+    bottom: -5%; /* End position inside the container */
+    opacity: 1;
+  }
+}
+
+@media (max-width: 800px) {
+  .about-container {
+    text-align: center;
+    flex-direction: column;
+  }
+}
+@media (max-width: 700px) {
+  .video-title {
+    width: 85%;
+  }
+  .video {
+    width: 85%;
+  }
+  .video-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  @media (max-width: 600px) {
+    .buy-image {
+      width: 350px;
+    }
+    .laptop-image {
+      width: 350px;
+    }
+    .roadmap-title {
+      width: 350px;
+    }
+    .footer-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+
+}
