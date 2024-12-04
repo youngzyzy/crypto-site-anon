@@ -301,5 +301,22 @@ footer {
       flex-direction: column;
     }
   }
+  @media (max-width: 600px) {
+    .buy-image {
+      width: 325px;
+    }
+    .laptop-image {
+      width: 325px;
+    }
+    .roadmap-title {
+      width: 350px;
+    }
+    .footer-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
 
 }
